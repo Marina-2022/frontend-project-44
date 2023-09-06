@@ -3,3 +3,6 @@
 
 **"brain-even"**
  [![ asciicast](https://asciinema.org/a/o0dU823tgaLE5HmGhtvOpeLcn.svg)](https://asciinema.org/a/o0dU823tgaLE5HmGhtvOpeLcn)
+
+**"brain-calc"**
+ [![asciicast](https://asciinema.org/a/rVBUbrD3fQdbGwmgatVPhcPnU.svg)](https://asciinema.org/a/rVBUbrD3fQdbGwmgatVPhcPnU)
