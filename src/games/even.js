@@ -1,31 +1,20 @@
-import readlineSync from 'readline-sync';
-import { startGame, getRandomValue } from '../index.js';
+import { startGame, getRandomValue, getEvenOrOdd } from '../index.js';
 
 const evenGame = () => {
-  const userName = startGame();
-
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-  let i = 1;
-  while (i <= 3) {
+  const task = 'Answer "yes" if the number is even, otherwise answer "no".';
+  const raund = 3;
+  const expressions = [];
+  const results = [];
+  let expressionsAndResults = [];
+  for (let i = 0; i < raund; i += 1) {
     const number = getRandomValue(1, 100);
-    console.log(`Question: ${number}`);
-    const answer = readlineSync.question('Your answer: ');
-    if ((number % 2 === 0 && answer === 'yes') || (number % 2 !== 0 && answer === 'no')) {
-      console.log('Correct!');
-    } else if (number % 2 === 0 && answer === 'no') {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'yes'`);
-      return console.log(`Let's try again, ${userName}!`);
-    } else if (number % 2 !== 0 && answer === 'yes') {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was 'no'`);
-      return console.log(`Let's try again, ${userName}!`);
-    } else {
-      console.log(`'${answer}' is wrong answer ;(.`);
-      return console.log(`Let's try again, ${userName}!`);
-    }
-    i += 1;
+    const expression = `${number}`;
+    expressions.push(expression);
+    const result = String(getEvenOrOdd(number));
+    results.push(result);
   }
-  return console.log(`Congratulations, ${userName}!`);
+  expressionsAndResults = [expressions, results];
+  startGame(expressionsAndResults, task);
 };
 
 export default evenGame;
