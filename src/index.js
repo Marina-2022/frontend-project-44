@@ -59,5 +59,19 @@ const gcd = (number1, number2) => {
   return a + b;
 };
 
+const startArithmeticProgression = () => {
+  const progressions = [];
+  const firstNumber = getRandomValue(1, 101);
+  const step = getRandomValue(1, 6);
+  const item = getRandomValue(5, 9);
+  let sum1 = firstNumber + step;
+  progressions.push(firstNumber, sum1);
+  for (let i = 0; i < item; i += 1) {
+    sum1 += step;
+    progressions.push(sum1);
+  }
+  return progressions;
+};
+
 export { startGame, getRandomValue, calculator };
-export { gcd, getEvenOrOdd };
+export { gcd, getEvenOrOdd, startArithmeticProgression };
