@@ -1,8 +1,10 @@
-import { startGame, getRandomValue, isPrime } from '../index.js';
+import {
+  startGame, getRandomValue, isPrime, raund,
+} from '../index.js';
+
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const primeGame = () => {
-  const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  const raund = 3;
   const expressions = [];
   const results = [];
   let expressionsAndResults = [];

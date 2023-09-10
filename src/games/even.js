@@ -1,8 +1,10 @@
-import { startGame, getRandomValue, getEvenOrOdd } from '../index.js';
+import {
+  startGame, getRandomValue, getEvenOrOdd, raund,
+} from '../index.js';
+
+const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const evenGame = () => {
-  const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const raund = 3;
   const expressions = [];
   const results = [];
   let expressionsAndResults = [];

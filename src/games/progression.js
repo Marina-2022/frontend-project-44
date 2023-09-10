@@ -1,8 +1,10 @@
-import { startGame, getRandomValue, startArithmeticProgression } from '../index.js';
+import {
+  startGame, getRandomValue, startArithmeticProgression, raund,
+} from '../index.js';
+
+const task = 'What number is missing in the progression?';
 
 const progressionGame = () => {
-  const task = 'What number is missing in the progression?';
-  const raund = 3;
   const expressions = [];
   const results = [];
   let expressionsAndResults = [];

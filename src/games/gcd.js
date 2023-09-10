@@ -1,8 +1,10 @@
-import { startGame, getRandomValue, gcd } from '../index.js';
+import {
+  startGame, getRandomValue, gcd, raund,
+} from '../index.js';
+
+const task = 'Find the greatest common divisor of given numbers.';
 
 const gcdGame = () => {
-  const task = 'Find the greatest common divisor of given numbers.';
-  const raund = 3;
   const expressions = [];
   const results = [];
   let expressionsAndResults = [];

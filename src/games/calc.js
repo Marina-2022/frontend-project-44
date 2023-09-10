@@ -1,8 +1,10 @@
-import { startGame, getRandomValue, calculator } from '../index.js';
+import {
+  startGame, getRandomValue, calculator, raund,
+} from '../index.js';
+
+const task = 'What is the result of the expression?';
 
 const calcGame = () => {
-  const task = 'What is the result of the expression?';
-  const raund = 3;
   const expressions = [];
   const results = [];
   let expressionsAndResults = [];

@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 
+const raund = 3;
+
 const startGame = (expressionsAndResults, task) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?: ');
   console.log(`Hello, ${userName}`);
   console.log(task);
-  const raund = 3;
   for (let i = 0; i < raund; i += 1) {
     console.log(`Question: ${expressionsAndResults[0][i]}`);
     const answer = (readlineSync.question('Your answer: '));
@@ -89,6 +90,7 @@ const isPrime = (number) => {
   return 'yes';
 };
 
-export { startGame, getRandomValue, calculator };
-export { gcd, getEvenOrOdd, startArithmeticProgression };
-export { isPrime };
+export {
+  startGame, getRandomValue, calculator, gcd, getEvenOrOdd, startArithmeticProgression, isPrime,
+  raund,
+};
