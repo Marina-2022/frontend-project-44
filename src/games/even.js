@@ -1,21 +1,11 @@
-import {
-  startGame, getRandomValue, getEvenOrOdd, raund,
-} from '../index.js';
+import { startGame } from '../index.js';
+import { forPridicat, isEven } from '../support.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-const expressions = [];
-const results = [];
 let expressionsAndResults = [];
 
 const evenGame = () => {
-  for (let i = 0; i < raund; i += 1) {
-    const number = getRandomValue(1, 100);
-    const expression = `${number}`;
-    expressions.push(expression);
-    const result = String(getEvenOrOdd(number));
-    results.push(result);
-  }
-  expressionsAndResults = [expressions, results];
+  expressionsAndResults = forPridicat(isEven);
   startGame(expressionsAndResults, task);
 };
 

@@ -1,6 +1,5 @@
-import {
-  startGame, getRandomValue, gcd, raund,
-} from '../index.js';
+import { startGame, raund } from '../index.js';
+import { getRandomValue, gcd } from '../support.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 const expressions = [];

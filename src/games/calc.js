@@ -1,6 +1,5 @@
-import {
-  startGame, getRandomValue, calculator, raund,
-} from '../index.js';
+import { startGame, raund } from '../index.js';
+import { getRandomValue, calculator } from '../support.js';
 
 const task = 'What is the result of the expression?';
 const expressions = [];

@@ -1,21 +1,11 @@
-import {
-  startGame, getRandomValue, isPrime, raund,
-} from '../index.js';
+import { startGame } from '../index.js';
+import { forPridicat, isPrime } from '../support.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const expressions = [];
-const results = [];
 let expressionsAndResults = [];
 
 const primeGame = () => {
-  for (let i = 0; i < raund; i += 1) {
-    const number = getRandomValue(1, 101);
-    const expression = `${number}`;
-    expressions.push(expression);
-    const result = String(isPrime(number));
-    results.push(result);
-  }
-  expressionsAndResults = [expressions, results];
+  expressionsAndResults = forPridicat(isPrime);
   startGame(expressionsAndResults, task);
 };
 
