@@ -73,5 +73,22 @@ const startArithmeticProgression = () => {
   return progressions;
 };
 
+const isPrime = (number) => {
+  if (number === 1) {
+    return 'no';
+  }
+  const max = number;
+  const arr = [];
+  for (let i = 2; i < max; i += 1) {
+    const result = number % i;
+    arr.push(result);
+  }
+  if (arr.includes(0)) {
+    return 'no';
+  }
+  return 'yes';
+};
+
 export { startGame, getRandomValue, calculator };
 export { gcd, getEvenOrOdd, startArithmeticProgression };
+export { isPrime };
