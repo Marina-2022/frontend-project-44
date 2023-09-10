@@ -3,12 +3,11 @@ import {
 } from '../index.js';
 
 const task = 'What number is missing in the progression?';
+const expressions = [];
+const results = [];
+let expressionsAndResults = [];
 
 const progressionGame = () => {
-  const expressions = [];
-  const results = [];
-  let expressionsAndResults = [];
-
   const missNumber = '..';
   for (let i = 0; i < raund; i += 1) {
     const arithmeticProgression = startArithmeticProgression();

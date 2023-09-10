@@ -3,11 +3,11 @@ import {
 } from '../index.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
+const expressions = [];
+const results = [];
+let expressionsAndResults = [];
 
 const evenGame = () => {
-  const expressions = [];
-  const results = [];
-  let expressionsAndResults = [];
   for (let i = 0; i < raund; i += 1) {
     const number = getRandomValue(1, 100);
     const expression = `${number}`;

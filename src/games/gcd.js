@@ -3,11 +3,11 @@ import {
 } from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
+const expressions = [];
+const results = [];
+let expressionsAndResults = [];
 
 const gcdGame = () => {
-  const expressions = [];
-  const results = [];
-  let expressionsAndResults = [];
   for (let i = 0; i < raund; i += 1) {
     const number1 = getRandomValue(1, 100);
     const number2 = getRandomValue(1, 100);
