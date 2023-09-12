@@ -4,6 +4,9 @@ import { getRandomValue } from '../support.js';
 const task = 'Find the greatest common divisor of given numbers.';
 
 const gcd = (numberX, numberY) => {
+  if (numberX === numberY) {
+    return numberX;
+  }
   let a = numberX;
   let b = numberY;
   while (a !== 0 && b !== 0) {
