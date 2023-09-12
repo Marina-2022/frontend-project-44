@@ -1,7 +1,16 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/Marina-2022/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/Marina-2022/frontend-project-44/actions)[![Maintainability](https://api.codeclimate.com/v1/badges/d9f1cf8f83dcac00c754/maintainability)](https://codeclimate.com/github/Marina-2022/frontend-project-44/maintainability)
 
+## "Brain games" ##
+
+Игры разума» — набор из пяти консольных игр. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново.
+
 **How to install:**
+
+1. Сlone this repository https://github.com/Marina-2022/frontend-project-44
+2. make install
+3. sudo npm link
+
 [![asciicast](https://asciinema.org/a/7FFzTJ7iOmewEHw6d4tcoLUsd.svg)](https://asciinema.org/a/7FFzTJ7iOmewEHw6d4tcoLUsd)
 
 **"brain-even"**
