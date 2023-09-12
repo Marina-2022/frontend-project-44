@@ -12,76 +12,20 @@ const getRandomValue = (min, max) => {
   return number;
 };
 
-const calculator = (a, b, operator) => {
-  switch (operator) {
-    case '+':
-      return a + b;
-    case '-':
-      return a - b;
-    case '*':
-      return a * b;
-    default:
-      return null;
-  }
-};
-
-const gcd = (number1, number2) => {
-  let a = number1;
-  let b = number2;
-  while (a !== 0 && b !== 0) {
-    if (a > b) {
-      a %= b;
-    } else if (b > a) {
-      b %= a;
-    }
-  }
-  return a + b;
-};
-
-const startArithmeticProgression = () => {
-  const progressions = [];
-  const firstNumber = getRandomValue(1, 101);
-  const step = getRandomValue(1, 6);
-  const item = getRandomValue(5, 9);
-  let sum1 = firstNumber + step;
-  progressions.push(firstNumber, sum1);
-  for (let i = 0; i < item; i += 1) {
-    sum1 += step;
-    progressions.push(sum1);
-  }
-  return progressions;
-};
-
-const isPrime = (number) => {
-  if (number === 1) {
-    return 'no';
-  }
-  const max = number;
-  const arr = [];
-  for (let i = 2; i < max; i += 1) {
-    const result = number % i;
-    arr.push(result);
-  }
-  if (arr.includes(0)) {
-    return 'no';
-  }
-  return 'yes';
-};
-
 const forPridicat = (evenOrPrime) => {
-  const expressions = [];
-  const results = [];
+  const expressionsAndResults = [];
+  // const expressions = [];
+  // const results = [];
   for (let i = 0; i < 3; i += 1) {
-    const number = getRandomValue(1, 101);
+    const number = getRandomValue(1, 100);
     const expression = `${number}`;
-    expressions.push(expression);
+    // expressions.push(expression);
     const result = String(evenOrPrime(number));
-    results.push(result);
+    // results.push(result);
+    const exprRes = [expression, result];
+    expressionsAndResults.push(exprRes);
   }
-  return [expressions, results];
+  return expressionsAndResults;
 };
 
-export {
-  getRandomValue, calculator, gcd, isEven, startArithmeticProgression, isPrime,
-  forPridicat,
-};
+export { getRandomValue, isEven, forPridicat };
