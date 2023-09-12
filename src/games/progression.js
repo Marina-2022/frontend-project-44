@@ -18,8 +18,6 @@ const startArithmeticProgression = () => {
 };
 
 const progressionGame = () => {
-  // const expressions = [];
-  // const results = [];
   const expressionsAndResults = [];
   const missNumber = '..';
   for (let i = 0; i < raundsCount; i += 1) {
@@ -28,12 +26,9 @@ const progressionGame = () => {
     const result = `${arithmeticProgression[randomMissIndex]}`;
     arithmeticProgression[randomMissIndex] = missNumber;
     const expression = `${arithmeticProgression.join(' ')}`;
-    // expressions.push(expression);
-    // results.push(result);
     const exprRes = [expression, result];
     expressionsAndResults.push(exprRes);
   }
-  // expressionsAndResults = [expressions, results];
   startGame(expressionsAndResults, task);
 };
 

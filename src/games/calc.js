@@ -17,8 +17,6 @@ const calculator = (a, b, operator) => {
 };
 
 const calcGame = () => {
-  // const expressions = [];
-  // const results = [];
   const expressionsAndResults = [];
   for (let i = 0; i < raundsCount; i += 1) {
     const number1 = getRandomValue(1, 100);
@@ -26,9 +24,7 @@ const calcGame = () => {
     const operators = ['+', '-', '*'];
     const operator = operators[getRandomValue(0, operators.length)];
     const expression = `${number1} ${operator} ${number2}`;
-    // expressions.push(expression);
     const result = String(calculator(number1, number2, operator));
-    // results.push(result);
     const exprRes = [expression, result];
     expressionsAndResults.push(exprRes);
   }

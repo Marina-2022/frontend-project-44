@@ -20,8 +20,6 @@ const isPrime = (number) => {
 };
 
 const primeGame = () => {
-  // let expressionsAndResults = [];
-  // expressionsAndResults = forPridicat(isPrime);
   startGame(forPridicat(isPrime), task);
 };
 
