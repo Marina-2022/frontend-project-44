@@ -1,5 +1,5 @@
 import { startGame, raundsCount } from '../index.js';
-import { getRandomValue } from '../support.js';
+import getRandomNumber from '../utils.js';
 
 const task = 'What is the result of the expression?';
 
@@ -12,23 +12,22 @@ const calculator = (a, b, operator) => {
     case '*':
       return a * b;
     default:
-      return null;
+      return `Unknown operator: ${operator}`;
   }
 };
 
-const calcGame = () => {
-  const expressionsAndResults = [];
+const startCalcGame = () => {
+  const raundInfo = [];
   for (let i = 0; i < raundsCount; i += 1) {
-    const number1 = getRandomValue(1, 100);
-    const number2 = getRandomValue(1, 100);
+    const number1 = getRandomNumber(1, 100);
+    const number2 = getRandomNumber(1, 100);
     const operators = ['+', '-', '*'];
-    const operator = operators[getRandomValue(0, operators.length)];
-    const expression = `${number1} ${operator} ${number2}`;
-    const result = String(calculator(number1, number2, operator));
-    const exprRes = [expression, result];
-    expressionsAndResults.push(exprRes);
+    const operator = operators[getRandomNumber(0, operators.length)];
+    const question = `${number1} ${operator} ${number2}`;
+    const rightAnswer = String(calculator(number1, number2, operator));
+    raundInfo.push([question, rightAnswer]);
   }
-  startGame(expressionsAndResults, task);
+  startGame(raundInfo, task);
 };
 
-export default calcGame;
+export default startCalcGame;
